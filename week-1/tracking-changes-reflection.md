@@ -9,9 +9,9 @@
  - *What does the HEAD^ argument mean?* It refers to the last commit you did.
  
  - *What are the 3 stages of a git change and how do you move a file from one stage to the other?* 
- 1. **git add** stages the changes so they're ready to be included in the commit. If you want to add just a single file or directory, make it **git add file-name**. If you want to add everything in your current directory, make it **git add .**
- 2. **git commit - m "commit message"** saves your changes to your local
- 3. **git push origin branch_name** pushes *branch_name* to the remote repo titled *origin*
+   1. **git add** stages the changes so they're ready to be included in the commit. If you want to add just a single file or directory, make it **git add file-name**. If you want to add everything in your current directory, make it **git add .**
+   2. **git commit - m "commit message"** saves your changes to your local
+   3. **git push origin branch_name** pushes *branch_name* to the remote repo titled *origin*
  
  - *Write a handy cheatsheet of the commands you need to commit your changes?*
    - **git branch** confirm I'm on the master
