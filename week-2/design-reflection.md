@@ -1,4 +1,4 @@
-[*Here's*](/imgs/site-map-0.pdf)* my site map.*
+[*Here's*](imgs/site-map-0.pdf) my site map.
 
 **What are the 6 Phases of Web Design?**
 	*1. Information gathering.* Understanding the purpose of the site, whether the goal is to impart information, make money, inspire action or whatever. It's also important to consider who is the target audience of the site and what the content will be.
