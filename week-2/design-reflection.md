@@ -1,17 +1,17 @@
-[*Here's*](imgs/site-map-0.pdf) my site map.
+[**Here's**](imgs/site-map-0.pdf) my site map.
 
 **What are the 6 Phases of Web Design?**
-	*1. Information gathering.* Understanding the purpose of the site, whether the goal is to impart information, make money, inspire action or whatever. It's also important to consider who is the target audience of the site and what the content will be.
-	*2. Planning.* Looking at how the site will flow, what viewers will see first and how they'll move from one page to another.Creating a site map, for example. 
-	*3. Design.* Making mockups of the site, including colors, logos, overall look of the site. These might just be images, not live pages, or live pages with limited functionality. The idea is to give the client a clear picture of how the site will look before moving on to the next step.
-	*4. Development.* Actually coding the site. Usually begin with the home page and then create a template for interior pages so their look is consistent.
-	*5. Testing & delivery.* Testing involves making sure the site works as it's meant to, including any forms or scripts. Also checking to be sure that it functions well on different platforms and devices. May include search-engine optimization through the use of titles, descriptions, keyword tags. Delivery is getting the web files to the client's server.
-	*6. Maintenance.* It's important to keep the site updated as either the client's desired content changes with new products or services or to keep it flowing properly as new platforms gain usage or popularity.
+	1. *Information gathering.* Understanding the purpose of the site, whether the goal is to impart information, make money, inspire action or whatever. It's also important to consider who is the target audience of the site and what the content will be.
+	2. *Planning.* Looking at how the site will flow, what viewers will see first and how they'll move from one page to another.Creating a site map, for example. 
+	3. *Design.* Making mockups of the site, including colors, logos, overall look of the site. These might just be images, not live pages, or live pages with limited functionality. The idea is to give the client a clear picture of how the site will look before moving on to the next step.
+	4. *Development.* Actually coding the site. Usually begin with the home page and then create a template for interior pages so their look is consistent.
+	5. *Testing & delivery.* Testing involves making sure the site works as it's meant to, including any forms or scripts. Also checking to be sure that it functions well on different platforms and devices. May include search-engine optimization through the use of titles, descriptions, keyword tags. Delivery is getting the web files to the client's server.
+	6. *Maintenance.* It's important to keep the site updated as either the client's desired content changes with new products or services or to keep it flowing properly as new platforms gain usage or popularity.
 
 **What is your site's primary goal or purpose?**
 My site's goal is to inform potential employers about my areas of expertise both through explanation in the "about me" section and example in the "projects" and "technical blog" sections. 
 
-** What kind of content will your site feature?**
+**What kind of content will your site feature?**
 It will feature both biographical information about my background, location and contact information as well as blog entries and examples of my work. At the moment, these are all pretty static web pages, using text and images without much in the way of interactive elements. I expect that will change in the future.
 
 **What is your target audience's interests and how do you see your site addressing them?**
