@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>GPS Dissect Me</title>
+</head>
+<body>
+<main>
+  	<h1>Week One Blog Post: Version Control & GitHub</h1>
+  	<h2>How to screw up everything you've done all week and not even want to kill yourself</h2>
+  	<h4>December 4, 2015</h4>
+
+  	<section>
+    	<p>
+       	So, since I'm pretty new to this coding thing, I was really happy that this week's challenges were basically about making me feel like I could jump in and hack away without worrying that I might break the whole internet.
+    	</p>
+    	
+    	<p>
+      	The whole idea of version control gives me a lovely sense of security. I can work at something until I get it functioning the way I want it to, save it in that state, and then keep fiddling with it knowing that if my later work introduces errors, I can always go back to that earlier, WORKING version, and start fresh. Also, starting fresh might actually be my last resort since I'll be able to see exactly what I've changed between that older version and the newer, buggy one.         
+    	</p>
+
+    	<p>
+      	I'm thinking of this as putting a copy of the work up on a high shelf somewhere (that's the commit and push to GitHub) and then pulling a ghost copy of it off that shelf to work on. I can do what I want with the ghost copy (my new branch) without having any impact on the master up there on the shelf until I decide I'm ready to merge the two.
+    	</p>
+    
+    	<p>
+      	Git lets me create that ghost copy by making a new branch, which is just a exact duplicate of the original work (the master), then I can add directories and/or files, make changes to the what was already there or whatever. I save those changes locally and get them ready to save copy to the master copy out in the cloud on GitHub.
+    	</p>
+    	
+    	<p>
+      	There's a multi-step process to get from two versions of the work back to one. First I have to use git add to "stage" my changes. Entering git status lets me see a list of the things that are ready to go. Once I'm satisfied that I've got them all, enter git commit -m "commit message" to save the lot of them.
+    	</p>
+    	
+    	<p>
+      	At this point, I've saved changes locally but not back up to GitHub, where my full working copy lives. Now I have to git push origin branch_name to make that happen. (Note to self: remember the name of the branch you created! It was a while ago so make that name something logical or bloody write it down!)
+    	</p>
+    	
+    	<p>
+      	I should be able to see my new branch on GitHub available to pull. I can create a new pull request, compare my updated work to the master and merge the two back into one, updated version. Storing my code on GitHub allows others to view it and even edit it and also ensures that there's a clean copy of it, including a record of past changes, somewhere other than my own hard drive. 
+    	</p>
+    	
+    	<p>
+      	Ahhh, peace of mind. :)
+    	</p>
+	</section>
+
+	<!--
+	What HTML5 tags have you used in this challenge and continue to return to often? Why?
+	Besides the basics like <html>, <head> and <title>, I've been using <main> and <section> to distinguish one part of the page from another and specify where the main content is located. Within those, naturally, there's <p> for separate paragraphs, <a> for links, <img> for images, which provide the actual content I want people to see. 
+
+	How do elements get laid out on a page? What is the order the browser uses to display elements?
+	I'm not sure I understand this question...but maybe you're asking about the difference between how I have elements typed up in the html file vs. how they show up in the browser? If so, I've structured my html file with indendations to emphasize on section from another and then further indents within the sections. I've added blank lines between the <p> elements also. None of those things show up in the browser. The browser displays the elements in the order they appear, ignoring the formatting I've added around them.
+
+
+	What did you learn about Sublime in this challenge? Do you think you'll create more handy snippets at a later date? What about research some shortcuts that already exist?
+	I learned how to access the Tools menu on my Linux machine! That was a little stressful because it's not obvious and I would have liked to have figured that out before I was in the GPS with an audience. But, once I did find that menu bar, everything went swimmingly.
+
+	I do like the idea of using snippets for other stuff besides just the basic skeleton elements. I can see putting together a template frame for my blog posts and creating a snippet of that so I only have to update the content for future posts and not the whole framework.
+
+	When I was searching for the tool bar (that sounds dumb but, really, it wasn't obvious) I came across a list of other things Sublime has built-in. I don't know what most of them do yet, but that looks promising.
+	-->
+</main>
+</body>
+</html>
