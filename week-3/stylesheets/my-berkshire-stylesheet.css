@@ -1,0 +1,89 @@
+ * {
+    color: #000080;
+    background-color: #ffffff;
+}
+
+a {
+    color: #800080;
+}
+
+a:visited {
+    color: #ff0000;
+}
+
+table {
+	display: block;
+  	font-size:16px;
+  	border-top: 1px solid black;
+  	border-bottom: 1px solid black;
+ }
+
+td {
+  	vertical-align: top;
+}
+
+span {
+  	font-size:12px;
+}
+
+header {
+  	font-weight: bold;
+  	text-align: center;  
+}
+.newline {
+  	display: block;
+}
+
+.border {
+  	border-top: 1px solid black;
+  	border-bottom: 1px solid black;
+  	padding-top: 10px;
+  	padding-bottom: 10px;
+}
+
+aside {
+  	text-align: center;
+  	font-size: 10px;
+}
+
+footer {
+  	font-size: 12px;
+}
+
+
+
+h1 > span {
+  	font-size: 80px; 
+}
+
+#font {
+  	font-size: 18px;
+}
+
+/*
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+The most important thing to know is the releative path of that file to your html file. I suppose, 
+if you're linking content you didn't invent youself, it would be good to know its copyright limitations.
+
+What tricks did you use to help you with positioning? 
+We used both a table and a footer to get things looking the way we wanted.
+
+How hard was it to get the site as you wanted it? 
+It was fun really, we tried a few different things that didn't work the way we wanted before we set on these.
+
+What CSS did you use to modify the element style (like size, color, etc.)
+We used tags, classes, pseudo, relationship and an ID. 
+
+Did you modify the HTML to include classes or ids? If so, which did you choose and why? 
+If you didn't, how would you know which one to add to your HTML?
+We did use both classes and an ID. We played with this actually because we both remembered from the primer that
+IDs are used for single instances but we found that we could use our ID in multiple places, on different kinds of 
+elements. Further reseach suggests that the difference is more a matter of best practice, where classes are used to 
+affect multiple elements or multiple different types of elements.
+
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices
+and why?
+We did think that! They used lots of html line breaks and a lot less of the CSS styles to force their site to look 
+the way it does. Our site is way better :)
+*/
