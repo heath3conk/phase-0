@@ -32,14 +32,8 @@ puts 'And what\'s your zip?'
 my_zip = gets.chomp
 
 def make_address (street, city, state, zip)
-	puts 'You live at ' + street + ', in the beautiful city of ' + city + ', ' + state + '. Your zip is ' + zip + '.'
+	'You live at ' + street + ', in the beautiful city of ' + city + ', ' + state + '. Your zip is ' + zip + '.'
 end
 
-make_address my_street, my_city, my_state, my_zip
-# why didn't this work with parentheses around the parameters?
-
-# At the moment, this is not passing the output test. The failure says the output was nil, so it doesn't seem like
-# a problem with typos or formatting but that the parameters are not being passed correctly. It works beautifully
-# when I run the actual program so I don't see what the problem is. Have been staring at it for about an hour now
-# and I'm just repeating the same things to try to fix it. Will have to come back to it another day and see if I 
-# can get it to pass.
+puts make_address my_street, my_city, my_state, my_zip
+# why doesn't this work with parentheses around the parameters????
