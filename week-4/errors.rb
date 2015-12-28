@@ -1,7 +1,7 @@
 # Analyze the Errors
 
 # I worked on this challenge by myself.
-# I spent [#] hours on this challenge. started at 2:38pm
+# I spent 1 hour on this challenge. 
 
 # --- error -------------------------------------------------------
 
@@ -34,7 +34,7 @@ end
 # => It's really in line 17 (well, it's NOT in line 17 and that's the error). The
 # => error message is looking at the end of line 170. (Note to reader: line 170 was the last
 # => line of the file when I started this exercise. After adding the answers to the questions
-# => and my reflection, the last line is now at line...)
+# => and my reflection, the last line is now at line...240)
 
 # 6. Why did the interpreter give you this error?
 # => There should be another 'end' in the block in lines 13-16. Both 'def' and 'while' 
