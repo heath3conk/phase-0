@@ -33,6 +33,10 @@ new_favorite = favorite_number + 1
 puts 'Maybe you should consider switching to ' + new_favorite.to_s + '.'
 puts 'I mean, ' + new_favorite.to_s + ' is bigger so it seems like a better number than ' + favorite_number.to_s + '.'
 
+
+# Link to my address formatting program: https://github.com/heath3conk/phase-0/blob/master/week-4/address/my_solution.rb
+# Link to my math program: https://github.com/heath3conk/phase-0/blob/master/week-4/math/my_solution.rb
+
 # How do you define a local variable?
 # Define a local variable by setting it equal to it's initial value. For example, middle_name = 'Cait'. 
 # The name of the variable goes to the left of the equals sign and the value to the right.
