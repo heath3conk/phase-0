@@ -31,9 +31,8 @@ my_state = gets.chomp
 puts 'And what\'s your zip?'
 my_zip = gets.chomp
 
-def make_address (street, city, state, zip)
+def make_address(street, city, state, zip)
 	'You live at ' + street + ', in the beautiful city of ' + city + ', ' + state + '. Your zip is ' + zip + '.'
 end
 
-puts make_address my_street, my_city, my_state, my_zip
-# why doesn't this work with parentheses around the parameters????
+puts make_address(my_street, my_city, my_state, my_zip)
