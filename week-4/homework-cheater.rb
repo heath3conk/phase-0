@@ -11,27 +11,42 @@
 #  - Print the essay to the screen
 
 def write_essay(array)
-	name = array[0]
-	birth_year = array[1]
-	occupation = array[2]
-	feat = array[3]
-	other_feat = array[4]
-	death_year = array[5]
+	# name = array[0]
+	# birth_year = array[1]
+	# occupation = array[2]
+	# feat = array[3]
+	# other_feat = array[4]
+	# death_year = array[5]
+	# if array[6] == "female"
+	# 	pronoun = "she"
+	# else
+	# 	pronoun = "he"
+	# end
+
+	# puts "#{name} was born on January 3 in #{birth_year}." 
+	# puts "#{pronoun.capitalize} was a #{occupation}."
+	# puts "One of the most notable things #{pronoun} did was to #{feat}."
+	# puts "#{pronoun.capitalize} also #{other_feat}."
+	# if death_year != ""
+	# 	puts "#{name} died in #{death_year}."
+	# else
+	# 	puts "#{name} turned #{2016-birth_year.to_i} years old this year."
+	# end
 	if array[6] == "female"
 		pronoun = "she"
 	else
 		pronoun = "he"
 	end
-
-	puts "#{name} was born on January 3 in #{birth_year}." 
-	puts "#{pronoun.capitalize} was a #{occupation}."
-	puts "One of the most notable things #{pronoun} did was to #{feat}."
-	puts "#{pronoun.capitalize} also #{other_feat}."
-	if death_year != ""
-		puts "#{name} died in #{death_year}."
+	puts array[0] + " was born on January 3 in " + array[1] + "."
+	puts "#{pronoun.capitalize} was a " + array[2] + "."
+	puts "One of the most notable things #{pronoun} did was to " + array[3] + "."
+	puts "#{pronoun.capitalize} also " + array[4] + "."
+	if array[5] != ""
+		puts array[0] + " died in " + array[5] + "."
 	else
-		puts "#{name} turned #{2016-birth_year.to_i} years old this year."
+	 	puts array[0] + " turned " + (2016-array[1].to_i).to_s + " years old this year."
 	end
+
 end
 
 puts "Who would you like to learn about?"
@@ -51,8 +66,9 @@ answer = gets.chomp
 # 	pronoun
 
 array_1 = ["Lucretia Coffin Mott", "1793", "women's rights activist, abolitionist, and social reformer", 
-	"attend the World Anti-Slavery Convention in London in 1840, where women delegates were segregated from men and not allowed to participate publicly", "helped write the \'Declaration of Sentiments\' at the 
-	Seneca Falls Convention for women's rights in 1848", "1880", "female"]
+	"attended the World Anti-Slavery Convention in London in 1840, where women delegates were segregated from men and not allowed to participate publicly", 
+	"helped write the \'Declaration of Sentiments\' at the Seneca Falls Convention for women's rights in 1848", 
+	"1880", "female"]
 
 array_2 = ["Cicero", "106 BCE", "Roman philosopher, politician, and orator", 
 	"write letters since their rediscovery is often credited for initiating the 14th century Renaissence in public affairs, humanism and classical Roman culture", 
