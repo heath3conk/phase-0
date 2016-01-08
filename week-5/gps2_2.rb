@@ -1,14 +1,10 @@
 # Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
-  # Create a new hash
-    # key - item name
-    # value - quantity    
-  # iterate over items
-    # add as keys
-    # assign default quantity of 1
-  # set default quantity
-  # print the list to the console [can you use one of your other methods here?]
+  # Create a new array, splitting the given string of items into elements of the array
+  # iterate over the elements of the array, putting them into a hash
+  	# key - item name
+    # value - set default quantity of 1
 # output: 
   # Hash = {item: quantity}
 
@@ -23,9 +19,9 @@ end
 # Method to add an item to a list
 # input: item name and optional quantity
 # steps: 
-#   check to see if the item is already in the list
-#     if it is in the list, update the quantiy
-#     if it's not in the list, add it
+#   add the item provided to the list
+# 	if no quantity is provided in the arguments, assume the 
+# 		quantity is 1
 # output:
   # Hash = {item: quantity}
 
@@ -39,9 +35,9 @@ end
 # Method to remove an item from the list
 # input: item 
 # steps: 
-#  Remove item from hash
+#  	Remove item from hash
 # output:
-# Updated hash
+# Updated Hash = {item: quantity}
 
 def remove_item(list, item_to_remove)
   list.reject! { |item, quantity| item == item_to_remove }
@@ -50,11 +46,10 @@ end
 
 
 # Method to update the quantity of an item
-# input: item name and optional quantity
+# input: item name and quantity
 # steps:
-#   check to see if the item is already in the list
-#     if it is in the list, update the quantiy
-#     if it's not in the list, add it
+#   overwrite the existing quantity for a given
+# 		item with the new quantity provided
 # output:
 # Hash = {item: quantity}
 
@@ -68,7 +63,7 @@ end
 # Method to print a list and make it look pretty
 # input: hash
 # steps:
-#  print all of the items and quantities within the array
+#  print all of the items and quantities on the list
 # output:
 #   items and quantities
 def print_list(list)
