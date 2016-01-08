@@ -1,12 +1,13 @@
 # Method to create a list
-# input: string of items separated by spaces (example: "carrots apples cereal pizza")
+# input: 
+#   String of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
-  # Create a new array, splitting the given string of items into elements of the array
-  # iterate over the elements of the array, putting them into a hash
-  	# key - item name
-    # value - set default quantity of 1
+#   Create a new array, splitting the given string of items into elements of the array
+#   Iterate over the elements of the array, putting them into a hash
+# 		- key - item name
+# 		- value - set default quantity of 1
 # output: 
-  # Hash = {item: quantity}
+#   Hash = {item: quantity}
 
 def create_list(items="")
   initial_list = items.split 
@@ -17,13 +18,13 @@ end
 
 
 # Method to add an item to a list
-# input: item name and optional quantity
+# input: 
+#   List, item name and optional quantity
 # steps: 
-#   add the item provided to the list
-# 	if no quantity is provided in the arguments, assume the 
-# 		quantity is 1
+#   Add the item provided to the list
+#   If no quantity is provided in the arguments, assume the quantity is 1
 # output:
-  # Hash = {item: quantity}
+#   Hash = {item: quantity}
 
 def add_item(list, item, quantity = 1)
   list [item] = quantity
@@ -33,11 +34,12 @@ end
 
 
 # Method to remove an item from the list
-# input: item 
+# input: 
+#   List and item to be removed
 # steps: 
 #  	Remove item from hash
 # output:
-# Updated Hash = {item: quantity}
+#   Updated Hash = {item: quantity}
 
 def remove_item(list, item_to_remove)
   list.reject! { |item, quantity| item == item_to_remove }
@@ -46,12 +48,12 @@ end
 
 
 # Method to update the quantity of an item
-# input: item name and quantity
+# input: 
+#   Item name and quantity
 # steps:
-#   overwrite the existing quantity for a given
-# 		item with the new quantity provided
+#   Overwrite the existing quantity for a given item with the new quantity provided
 # output:
-# Hash = {item: quantity}
+#   Hash = {item: quantity}
 
 def update_item(list, item_to_update, new_quantity)
   list[item_to_update] = new_quantity
@@ -59,13 +61,14 @@ def update_item(list, item_to_update, new_quantity)
 end
 
 
-
 # Method to print a list and make it look pretty
-# input: hash
+# input: 
+#   List of items and quantities (in a hash)
 # steps:
-#  print all of the items and quantities on the list
+#   Print all of the items and quantities on the list
 # output:
-#   items and quantities
+#   Items and quantities
+
 def print_list(list)
   list.each_pair{ |item, quantity| puts "#{item}: #{quantity}" }
 end
