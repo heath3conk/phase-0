@@ -30,7 +30,7 @@
 
 class Die
   def initialize(sides)
-  	raise ArgumentError, "Your die needs to have at least one side!" unless sides > 1
+  	raise ArgumentError, "Your die needs to have at least 1 side!" unless sides > 1
     @sides = sides
   end
 
