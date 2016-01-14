@@ -1,8 +1,8 @@
 # Class Warfare, Validate a Credit Card Number
 
 
-# I worked on this challenge [by myself, with: ].
-# I spent [#] hours on this challenge.
+# I worked on this challenge with Sydney Rossman-Reich.
+# I spent 1.25 hours on this challenge.
 
 # Pseudocode
 
