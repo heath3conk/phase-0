@@ -1,6 +1,6 @@
 # A Nested Array to Model a Bingo Board SOLO CHALLENGE
 
-# I spent [#] hours on this challenge.started at 8:45am 
+# I spent 8 hours on this challenge (not counting thinking about it in the shower)
 
 
 # Release 0: Pseudocode
@@ -31,6 +31,7 @@
 # Display the board to the console (prettily)
 # => Print each inner array to the screen with a newline between them
 # => The goal is for the columns to match up
+
 
 # Initial Solution
 
