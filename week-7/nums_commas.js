@@ -95,5 +95,25 @@ console.log(separate_comma(108069408849846883989));
 
 
 
-
+/*
 // Reflection
+What was it like to approach the problem from the perspective of JavaScript? Did you approach the problem differently?
+  I didn't look at my Ruby solution until now. I think this one is a little more straightforward but that 
+  might be because I'm partial to the more recent way my brain was working. In the Ruby version in week 5, initial
+  version I did approximately the same thing but it was more lines of code. 
+
+What did you learn about iterating over arrays in JavaScript?
+  We didn't really iterate over an array. We sliced a string and added its parts to an array and then used 
+  built-in array methods to get the string we wanted back out.
+
+What was different about solving this problem in JavaScript?
+  Still getting used to including semicolons everywhere and putting parenthese in if statements, syntax stuff
+  mostly. 
+
+What built-in methods did you find to incorporate in your refactored solution?
+  We were using reverse and join on our original solution. The main change from our initial to our 
+  refactored solution was that we figured out how to not get leading commas when we were dealing with 
+  numbers that had exactly 6 or 9 or 12, etc. characters.
+
+
+*/
