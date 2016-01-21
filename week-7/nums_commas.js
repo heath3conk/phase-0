@@ -25,16 +25,6 @@ Steps:
  12.     return interger to console
 
 
-shorter_string = 1 000
-shorter_string.slice(-3) = 000
-shorter_string = shorter_string.slice(0,(shorter_string.length-3)).... 1
-
-shorter_sting = 1 000 000
-short_string.slice(-3)= 000
-
-for (number_string = 4; number_string.length < )
-
-array = ["000","1"]
 */
 
 
