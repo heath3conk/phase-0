@@ -1,5 +1,40 @@
 
 // Add the finished solution here when you receive it.
+// Refactored code:
+
+// Simplified variable names and sum.
+function sum(array){
+  // This works thanks to ECMAScript 6!
+  var total = array.reduce((a, b) => a + b, 0); 
+  return total;
+}
+
+// Got rid of total_sum variable.
+function mean(array){
+  var average = sum(array) / array.length;
+  return average;
+}
+
+// Cleaned up some variables that weren't necessary and reduced steps by altering calculations and rearranging if statement.
+function median(array) {
+  array.sort(function(a,b){return a-b});
+  var half = Math.floor(array.length / 2)
+  // This is equivalent to "if (array.length % 2 != 0)" because 0 evaluates to 'false' in JS.
+  if (array.length % 2){ 
+    return array[half];
+  }else{
+    return (array[half - 1] + array[half]) / 2;
+  }
+}
+
+//Driver Code:
+
+// var nums = [-1, 0, 1, 2, 3, 3.5, -3]
+// console.log(sum(nums))
+// console.log(mean(nums))
+// console.log(median(nums))
+
+
 // __________________________________________
 // Tests:  Do not alter code below this line.
 
@@ -72,4 +107,4 @@ assert(
   median(evenLengthArray) === 5.5,
   "median should return the median value of all elements in an array with an even length.",
   "9. "
-)x
+)
