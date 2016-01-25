@@ -7,8 +7,9 @@
 // Goals: Guess letters and use their position in the word to guess the full word
 //  	  Avoid incorrect guesses.
 // Characters: player, scaffold (cue spooky music)
-// Objects: scaffold, word, correct guesses, incorrect guesses
-// Functions: choose_word, guess_letter, examine_word(word,letter),display_result()
+// Objects: scaffold, word, correct_guesses, incorrect_guesses
+// Functions: choose_word, setup_word(game_word), guess_letter, examine_word(game_word), 
+      	  game_over(game_word, unsolve_word)
 
 // Pseudocode
  Pre-game setup: Create common variables & objects
@@ -83,6 +84,7 @@ Play a turn:
 */
 
 // Initial Code
+/*
 var scaffold = {
   1: "  _________\n  |       |\n          |\n          |\n          |\n          |\n _________|_\n|           |",
   2: "  _________\n  |       |\n ( )      |\n          |\n          |\n          |\n _________|_\n|           |",
@@ -191,21 +193,145 @@ function game_over(game_word,unsolved_word) {
 game_word = choose_word();
 setup_word(game_word);
 examine_word(game_word);
-
+*/
 
 // Refactored Code
 
+var scaffold = {
+  1: "  _________\n  |       |\n          |\n          |\n          |\n          |\n _________|_\n|           |",
+  2: "  _________\n  |       |\n ( )      |\n          |\n          |\n          |\n _________|_\n|           |",
+  3: "  _________\n  |       |\n ( )      |\n  |       |\n          |\n          |\n _________|_\n|           |",
+  4: "  _________\n  |       |\n ( )      |\n \\|       |\n          |\n          |\n _________|_\n|           |",
+  5: "  _________\n  |       |\n ( )      |\n \\|/      |\n          |\n          |\n _________|_\n|           |",
+  6: "  _________\n  |       |\n ( )      |\n \\|/      |\n  |       |\n          |\n _________|_\n|           |",
+  7: "  _________\n  |       |\n ( )      |\n \\|/      |\n  |       |\n /        |\n _________|_\n|           |", 
+  8: "  _________\n  |       |\n ( )      |\n \\|/      |\n  |       |\n / \\      |\n _________|_\n|           |",
+  
+};
+
+var letter_index = 0;
+var letters_by_frequency = ["e", "t", "a", "o", "i", "n", "s", "r", "h", "d", "l", "u", "c", "m", "f", "y", "w",
+    "g", "p", "b", "v", "k", "x", "q", "j", "z"];
+
+var incorrect_guesses = [];
+var incorrect_guess_count = 0;
+var unsolved_word = [];
+
+
+function choose_word() { // this has to return the new word
+  var long_words = ["analogous", "bartender", "chipmunks", "dirigible", "economics", "foolhardy",
+   "groceries", "hoodwinks", "influence", "jailbreak", "knowledge", "longitude", "microchip", "narrative", 
+   "obnoxious", "practiced", "questions", "rationale", "snowdrift", "trombones","umbrellas", "validated",
+   "windblown", "xenophile", "youngster", "zealously"]
+
+  var short_words = ["acquit", "botany", "column","devour", "elixir", "flagon", "gelato", "hungry", "injury",
+   "jokers", "kicker", "lunacy","midget", "nebula", "orphan", "purify", "quirky", "rhumba", "syntax", "tragic",
+   "uptalk", "voyage", "woeful", "yachts", "zonked", "opaque"] // didn't find any good words starting with x
+
+  var index = Math.floor(Math.random() * 25);
+
+  var word;
+  (Math.random() < .5) ? word = long_words[index] : word = short_words[index]
+  word = word.split('');
+  return word;
+}
+
+function setup_word(game_word) { // this has to return the unsolved_word array with the correct number of blanks
+  for (index = 0; index < game_word.length; index++) {
+  	unsolved_word[index] = "___";
+  }
+  console.log("Your word has " + game_word.length + " letters.");
+  console.log("If you guess 8 wrong letters, you lose.");
+  console.log("Good luck!");
+  return unsolved_word;
+}
+
+
+function guess_letter() {
+  console.log("You guessed: " + letters_by_frequency[letter_index]);
+  return letter_index++;
+
+}
+
+function examine_word(game_word) {
+  var new_letter = letters_by_frequency[guess_letter()];
+  var letters_found = 0;
+  var found_at = [];
+  for (var position = 0; position < game_word.length; position++){
+  	if (game_word[position] == new_letter) {
+  		letters_found ++;
+  	    found_at.push(position);
+  	}
+  }
+
+  if (letters_found == 0) {
+  	incorrect_guesses.push(new_letter);
+  	incorrect_guess_count++;
+  	var guesses_left = 8 - incorrect_guess_count;
+  	console.log(scaffold[incorrect_guess_count]);
+  	console.log("No luck, sorry!");
+  	console.log("You have " + guesses_left + " wrong guesses left.")
+  	console.log("These are the incorrect letters you've already guessed: " + incorrect_guesses);
+  }
+  else {
+  	console.log("Good guess!");
+  	for (var index = 0; index < found_at.length; index++) {
+  		unsolved_word[found_at[index]] = new_letter;
+  	}
+  }
+  console.log(unsolved_word.join(" "));
+  game_over(game_word, unsolved_word);
+  return unsolved_word;
+}
+
+function game_over(game_word,unsolved_word) {
+  if (game_word.join("") === unsolved_word.join("")) {
+  	console.log("You won! Nice job");
+  	return unsolved_word;
+  }
+  	else if (incorrect_guess_count ===8 ) {
+  		console.log("Game over. You lose.");
+  		console.log("The word was " + game_word.join(""));
+  	}
+  	else {
+  		examine_word(game_word);
+  	}
+}
+
+game_word = choose_word();
+setup_word(game_word);
+examine_word(game_word);
 
 
 
-
-
+/*
 // Reflection
-//
-//
-//
-//
-//
-//
-//
-//
+What was the most difficult part of this challenge?
+	Limiting myself! I attempted Release 6...which is to say that I did a bunch of reading
+	about putting JavaScript onto my website and spent a while on Codecademy. I feel like 
+	I have a glimmer of understanding about how that will work but I realized late Sunday
+	afternoon that I didn't have 10 more hours to work on it. If this isn't already part 
+	of our assignments over the next couple of weeks, I'm going to keep working on it :)
+
+	Wait, was I supposed to actually LEARN how to limit myself?
+
+
+What did you learn about creating objects and functions that interact with one another?
+	I went back to my pseudocode partway into coding this to flesh out the interactions
+	among the functions and make sure I knew how to engineer the functions to give me 
+	what I needed and how to feed that return value into the next function in line.
+
+Did you learn about any new built-in methods you could use in your refactored solution? 
+If so, what were they and how do they work?
+	I used some built-in methods to manipulate arrays, like push and replacing the values
+	at specific positions within the arrays. 
+
+	I also figured out that I couldn't compare two arrays. I had to turn them into
+	strings to get an accurate answer about their equality. 
+
+How can you access and manipulate properties of objects?
+	I had to play around with scope a bit. Some of the variables had to be accessible
+	by several functions and others didn't. I also used the functions and their 
+	return values to manipulate objects.
+
+*/
